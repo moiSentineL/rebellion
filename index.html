@@ -1,0 +1,552 @@
+<!DOCTYPE html><html lang="en" class="dark scroll-smooth"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STUDY REBELLION PT. II — Event Promo</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'accent': '#FFFFFF',
+        'light-primary': '#111111',
+        'light-on-primary': '#FFFFFF',
+        'light-surface': '#FAFAFA',
+        'light-on-surface': '#111111',
+        'light-outline': '#E5E5E5',
+        'light-surface-container': '#F0F0F0',
+        'dark-primary': '#FFFFFF',
+        'dark-on-primary': '#0A0A0A',
+        'dark-surface': '#0A0A0A',
+        'dark-on-surface': '#F5F5F5',
+        'dark-outline': '#2A2A2A',
+        'dark-surface-container': '#141414',
+        'dark-surface-container-high': '#1E1E1E',
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '10px',
+        'lg': '12px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section-sm': '48px',
+        'section-lg': '80px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Outfit"', 'sans-serif'],
+        'headline': ['"Outfit"', 'sans-serif'],
+        'body': ['"Inter"', 'sans-serif'],
+        'label': ['"Inter"', 'sans-serif'],
+        'mono': ['"JetBrains Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-2xl': ['72px', { lineHeight: '76px', letterSpacing: '-1.5px', fontWeight: '800' }],
+        'display-2xl-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.8px', fontWeight: '800' }],
+        'display-xl': ['56px', { lineHeight: '64px', letterSpacing: '-1px', fontWeight: '700' }],
+        'display-xl-mobile': ['30px', { lineHeight: '36px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.5px', fontWeight: '600' }],
+        'headline-lg-mobile': ['24px', { lineHeight: '32px', letterSpacing: '-0.2px', fontWeight: '600' }],
+        'headline-md': ['24px', { lineHeight: '32px', letterSpacing: '-0.2px', fontWeight: '600' }],
+        'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
+        'body-md': ['15px', { lineHeight: '24px', fontWeight: '400' }],
+        'body-sm': ['13px', { lineHeight: '20px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.5px', fontWeight: '600' }],
+        'label-sm': ['11px', { lineHeight: '16px', letterSpacing: '1px', fontWeight: '600' }],
+        'mono-num': ['48px', { lineHeight: '52px', letterSpacing: '-1px', fontWeight: '700' }],
+        'mono-num-mobile': ['28px', { lineHeight: '34px', fontWeight: '700' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.5px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'accordion-toggle': '300ms',
+        'carousel-scroll': '350ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'accordion-toggle': '0ms',
+        'carousel-scroll': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'accordion-toggle': 'cubic-bezier(0.16, 1, 0.3, 1)',
+        'carousel-scroll': 'cubic-bezier(0.2, 0, 0, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      line-height: 1 !important;
+      box-sizing: content-box;
+      overflow: hidden;
+      white-space: nowrap;
+      direction: ltr;
+      vertical-align: middle;
+    }
+    /* Hide scrollbars for clean minimal carousels */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    /* Subtle grid overlay for stark editorial precision */
+    .editorial-grid-bg {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-dark-surface text-dark-on-surface min-h-[1024px] font-body selection:bg-dark-primary selection:text-dark-on-primary editorial-grid-bg flex flex-col justify-between antialiased" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+  <!-- TOP HEADER / NAV BAR -->
+  <header class="w-full border-b border-dark-outline bg-dark-surface/90 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="inline-block w-2.5 h-2.5 bg-dark-primary"></span>
+        <span class="font-mono text-mono-sm uppercase tracking-widest text-dark-on-surface" data-design-text-token="mono-sm">SR//EDITION.02</span>
+      </div>
+      
+      <div class="flex items-center gap-8">
+        <div class="hidden sm:flex items-center gap-2 font-mono text-[11px] text-dark-on-surface/50">
+          <span class="w-1.5 h-1.5 rounded-full bg-yellow-500 animate-pulse"></span>
+          <span>WAITING</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN VIEWPORT CONTENT -->
+  <main class="w-full max-w-5xl mx-auto px-6 py-12 md:py-20 flex-1 flex flex-col items-center">
+    
+    <!-- EYEBROW / INTRO TAG -->
+    <div class="mb-6 flex items-center gap-3">
+      <span class="px-2.5 py-1 border border-dark-outline bg-dark-surface-container font-mono text-mono-sm text-dark-on-surface/70 tracking-widest">
+        GLOBAL 60-DAY CHALLENGE
+      </span>
+      <span class="font-mono text-mono-sm text-dark-on-surface/40">// DEC-1 : JAN-31</span>
+    </div>
+
+    <!-- MAIN EYE-CATCHER TITLE -->
+    <section class="text-center w-full mb-12">
+      <h1 class="font-display text-[44px] sm:text-[68px] md:text-[88px] lg:text-[96px] leading-[0.92] font-extrabold uppercase tracking-[-0.04em] text-dark-primary text-balance select-none">
+        STUDY REBELLION<br class="hidden sm:inline"> <span class="text-neutral-400 font-black">PT. II</span>
+      </h1>
+      <p class="mt-6 max-w-xl mx-auto font-body text-body-md text-dark-on-surface/60 text-pretty" data-design-text-token="body-md">
+        The second iteration of the event that made people focus on the things that matter the most. Reach your peak and see others do as well.
+      </p>
+    </section>
+
+    <!-- COUNTDOWN TIMER SECTION -->
+    <section class="w-full max-w-3xl mb-16 border-y border-dark-outline py-8" aria-label="Event countdown">
+      <div class="flex items-center justify-between mb-4">
+        <span class="font-mono text-[11px] uppercase tracking-widest text-dark-on-surface/50">TIME REMAINING TILL COMMENCEMENT</span>
+        <span class="font-mono text-[11px] text-dark-on-surface/40">T-MINUS // SYNC UTC</span>
+      </div>
+
+      <div class="grid grid-cols-4 gap-2 sm:gap-4 text-center">
+        <!-- DAYS -->
+        <div class="bg-dark-surface-container border border-dark-outline p-4 sm:p-6 flex flex-col items-center">
+          <span id="countdown-days" class="font-mono text-mono-num-mobile sm:text-mono-num text-dark-primary tracking-tight tabular-nums" data-design-text-token="mono-num">11</span>
+          <span class="font-mono text-[10px] sm:text-mono-sm uppercase text-dark-on-surface/40 tracking-wider mt-1">DAYS</span>
+        </div>
+        <!-- HOURS -->
+        <div class="bg-dark-surface-container border border-dark-outline p-4 sm:p-6 flex flex-col items-center">
+          <span id="countdown-hours" class="font-mono text-mono-num-mobile sm:text-mono-num text-dark-primary tracking-tight tabular-nums" data-design-text-token="mono-num">08</span>
+          <span class="font-mono text-[10px] sm:text-mono-sm uppercase text-dark-on-surface/40 tracking-wider mt-1">HOURS</span>
+        </div>
+        <!-- MINUTES -->
+        <div class="bg-dark-surface-container border border-dark-outline p-4 sm:p-6 flex flex-col items-center">
+          <span id="countdown-minutes" class="font-mono text-mono-num-mobile sm:text-mono-num text-dark-primary tracking-tight tabular-nums" data-design-text-token="mono-num">24</span>
+          <span class="font-mono text-[10px] sm:text-mono-sm uppercase text-dark-on-surface/40 tracking-wider mt-1">MINUTES</span>
+        </div>
+        <!-- SECONDS -->
+        <div class="bg-dark-surface-container border border-dark-outline p-4 sm:p-6 flex flex-col items-center">
+          <span id="countdown-seconds" class="font-mono text-mono-num-mobile sm:text-mono-num text-dark-primary tracking-tight tabular-nums" data-design-text-token="mono-num">37</span>
+          <span class="font-mono text-[10px] sm:text-mono-sm uppercase text-dark-on-surface/40 tracking-wider mt-1">SECONDS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- THREE EXPANDABLE INFO CARDS -->
+    <section class="w-full max-w-3xl flex flex-col gap-4" aria-label="Event information cards">
+      
+      <!-- CARD 1: WHAT IS IT? -->
+      <article id="card-what-is-it" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="info-card w-full bg-dark-surface-container border border-dark-primary transition-all duration-state-change">
+        <button type="button" onclick="toggleCard(&#39;card-what-is-it&#39;)" class="w-full p-6 sm:p-8 flex items-center justify-between text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-dark-primary cursor-pointer group" aria-expanded="true" aria-controls="content-what-is-it">
+          <div class="flex items-center gap-4 sm:gap-6">
+            <span class="font-mono text-mono-sm text-dark-primary">01</span>
+            <div>
+              <h2 class="font-headline text-headline-md sm:text-headline-lg font-bold uppercase tracking-tight text-dark-primary transition-colors" data-design-text-token="headline-md">
+                What is it?
+              </h2>
+              <p class="font-body text-body-sm text-dark-on-surface/50 mt-1">
+                The manifesto, the rules, and the collective sprint premise.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="font-mono text-mono-sm text-dark-on-surface/40 hidden sm:inline toggle-hint">COLLAPSE</span>
+            <span class="material-symbols-outlined text-dark-on-surface/70 text-2xl transition-transform duration-accordion-toggle chevron-icon rotate-180">
+              expand_more
+            </span>
+          </div>
+        </button>
+
+        <!-- EXTENDED CONTENT AREA -->
+        <div id="content-what-is-it" class="card-content px-6 pb-8 sm:px-8 border-t border-dark-outline/40 pt-6">
+          <div class="max-w-2xl space-y-4">
+            <p class="font-body text-body-md text-dark-on-surface/80" data-design-text-token="body-md">
+              <strong class="text-dark-primary font-semibold">STUDY REBELLION PT. II</strong> is a non-commercial, decentralized academic hackathon and study offensive. We reject algorithmic distractions, passive notifications, and digital fatigue in exchange for 48 hours of intense intellectual output.
+            </p>
+            <p class="font-body text-body-md text-dark-on-surface/80" data-design-text-token="body-md">
+              Whether preparing doctoral defenses, mastering complex engineering codebases, writing dissertations, or finishing overdue research papers, participants lock into virtual and physical quiet hubs under one unified cadence.
+            </p>
+          </div>
+
+          <!-- EMBEDDED SCROLLING SCREENSHOT CAROUSEL -->
+          <div class="mt-6 pt-6 border-t border-dark-outline/30">
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono text-mono-sm text-dark-on-surface/50 uppercase">ARCHIVE PROOFS // PT. I HIGHLIGHTS</span>
+              <div class="flex items-center gap-2">
+                <button type="button" onclick="scrollCarousel(&#39;carousel-track-1&#39;, -320)" aria-label="Previous screenshot" class="w-8 h-8 flex items-center justify-center border border-dark-outline bg-dark-surface text-dark-on-surface hover:border-dark-primary transition-colors text-sm">
+                  <span class="material-symbols-outlined text-base">chevron_left</span>
+                </button>
+                <button type="button" onclick="scrollCarousel(&#39;carousel-track-1&#39;, 320)" aria-label="Next screenshot" class="w-8 h-8 flex items-center justify-center border border-dark-outline bg-dark-surface text-dark-on-surface hover:border-dark-primary transition-colors text-sm">
+                  <span class="material-symbols-outlined text-base">chevron_right</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAROUSEL TRACK -->
+            <div id="carousel-track-1" data-component-id="carousel-default" data-component-type="carousel" data-component-variant="default" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 no-scrollbar scroll-smooth">
+              <!-- Slide 1 -->
+              <div class="min-w-[280px] sm:min-w-[340px] flex-none snap-start bg-dark-surface border border-dark-outline">
+                <div class="aspect-video relative overflow-hidden bg-neutral-900">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrCGjDnm8N88SC41IW5Bym6rVEQ0ciKJmsB3ZybQP4OUSedTZwxP1BBhL881D1-bv0sSZo1JuTNVxJUUbmSso2XCl-gAxR90lXwFyqeadHgvPLDS1zjl31Fnzg5P0LIO4kXIZpyEp8xo1U5fbddtyhkOz53Z7CMKZT-Zmw3-TRQ-BFdzHkAwhqoASezSJhVsrhjt_VIJEZaGSfyeQeSQHUfGbLuA2IVXtUaVSBFzHRRvcYnVHnY" alt="Dark minimalist study room with glowing screens" class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300">
+                  <div class="absolute bottom-2 left-2 px-2 py-0.5 bg-dark-surface/90 border border-dark-outline font-mono text-[10px] text-dark-on-surface">
+                    SESSION 01 // TOKYO SYNAPSE
+                  </div>
+                </div>
+                <div class="p-3">
+                  <p class="font-mono text-mono-sm text-dark-on-surface/70">Synchronous 24h sprint floor</p>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="min-w-[280px] sm:min-w-[340px] flex-none snap-start bg-dark-surface border border-dark-outline">
+                <div class="aspect-video relative overflow-hidden bg-neutral-900">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrBQDGO-HHJWQm_iJ8lkPCfmahCjjvqLNb2BWlq4uMS_Gyx7Jx0ypOn1OAx2UPo6waNCPar2D0Ctd9k_SRlFlGtqhJimqFuEpYzu9D8JKoq8BiY8Qxgz-9wuCJro99SZ2cp2j7mLIlNtaO3e5bvXoimua5wHMkVt4G_-RUCq9RXqeCJsro0ykXi4IE3dRgHSKZgb69O9qupY-jqIS_1b2jjQonNeEacoIkOv7GFRngU649Jfayfe" alt="Workspace setup with clean terminal typography" class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300">
+                  <div class="absolute bottom-2 left-2 px-2 py-0.5 bg-dark-surface/90 border border-dark-outline font-mono text-[10px] text-dark-on-surface">
+                    RIG SETUP // HEADLESS MODE
+                  </div>
+                </div>
+                <div class="p-3">
+                  <p class="font-mono text-mono-sm text-dark-on-surface/70">Custom focus shell &amp; timer sync</p>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="min-w-[280px] sm:min-w-[340px] flex-none snap-start bg-dark-surface border border-dark-outline">
+                <div class="aspect-video relative overflow-hidden bg-neutral-900">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrBWB8XwZZr_uT-ZDFH7_y46rbek_xI-xlE22lEQY55Rjo_xMjtEVqem5VAfKYt-aIf4vIbsJl2ldCoFFfYttA6bHCdNHKo_ZMYiasvAR2It-yETp83m3WrfY3h4Gd6EqGIZ3E29dmrccssZtv-eoMrxY3-VbGzCad9lhvylVh9YTB8aP181k1v0lCMOG0g9rARkjgbMW7Q-10v0e3xLIPbobqQ6tNWVlpG7k2fwglAgsgvHlME" alt="Focused students in study session" class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300">
+                  <div class="absolute bottom-2 left-2 px-2 py-0.5 bg-dark-surface/90 border border-dark-outline font-mono text-[10px] text-dark-on-surface">
+                    WAR ROOM // BERLIN SQUAD
+                  </div>
+                </div>
+                <div class="p-3">
+                  <p class="font-mono text-mono-sm text-dark-on-surface/70">Peer accountability sprint</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 2: HOW DO I PARTICIPATE? -->
+      <article id="card-how-do-i-participate" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="info-card w-full bg-dark-surface-container border border-dark-outline transition-all duration-state-change hover:border-dark-on-surface/50">
+        <button type="button" onclick="toggleCard(&#39;card-how-do-i-participate&#39;)" class="w-full p-6 sm:p-8 flex items-center justify-between text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-dark-primary cursor-pointer group" aria-expanded="false" aria-controls="content-how-do-i-participate">
+          <div class="flex items-center gap-4 sm:gap-6">
+            <span class="font-mono text-mono-sm text-dark-on-surface/40 group-hover:text-dark-primary transition-colors">02</span>
+            <div>
+              <h2 class="font-headline text-headline-md sm:text-headline-lg font-bold uppercase tracking-tight text-dark-on-surface group-hover:text-dark-primary transition-colors" data-design-text-token="headline-md">
+                How do I participate?
+              </h2>
+              <p class="font-body text-body-sm text-dark-on-surface/50 mt-1">
+                Prerequisites, onboarding protocol, and submission rules.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="font-mono text-mono-sm text-dark-on-surface/40 hidden sm:inline toggle-hint">EXTEND</span>
+            <span class="material-symbols-outlined text-dark-on-surface/70 text-2xl transition-transform duration-accordion-toggle chevron-icon">
+              expand_more
+            </span>
+          </div>
+        </button>
+
+        <!-- EXTENDED CONTENT AREA -->
+        <div id="content-how-do-i-participate" class="card-content hidden px-6 pb-8 sm:px-8 border-t border-dark-outline/40 pt-6">
+          <div class="max-w-2xl space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="p-4 bg-dark-surface border border-dark-outline">
+                <span class="font-mono text-mono-sm text-dark-on-surface/40">PHASE 01</span>
+                <h3 class="font-headline text-headline-md font-semibold text-dark-primary mt-1" data-design-text-token="headline-md">Commit Scope</h3>
+                <p class="font-body text-body-sm text-dark-on-surface/70 mt-1" data-design-text-token="body-sm">Declare exactly 1 key artifact or output target before 00:00 UTC.</p>
+              </div>
+              <div class="p-4 bg-dark-surface border border-dark-outline">
+                <span class="font-mono text-mono-sm text-dark-on-surface/40">PHASE 02</span>
+                <h3 class="font-headline text-headline-md font-semibold text-dark-primary mt-1" data-design-text-token="headline-md">Kill Comms</h3>
+                <p class="font-body text-body-sm text-dark-on-surface/70 mt-1" data-design-text-token="body-sm">Mute socials, silence notifications, connect to audio stream.</p>
+              </div>
+              <div class="p-4 bg-dark-surface border border-dark-outline">
+                <span class="font-mono text-mono-sm text-dark-on-surface/40">PHASE 03</span>
+                <h3 class="font-headline text-headline-md font-semibold text-dark-primary mt-1" data-design-text-token="headline-md">Deliver Proof</h3>
+                <p class="font-body text-body-sm text-dark-on-surface/70 mt-1" data-design-text-token="body-sm">Submit your finished repository, manuscript, or build at T-0.</p>
+              </div>
+            </div>
+
+            <!-- REGISTRATION ACTION BUTTON -->
+            <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+              <button type="button" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" onclick="alert(&#39;Registration confirmed. Encrypted briefing link sent to terminal.&#39;)" class="w-full sm:w-auto px-8 py-3 bg-dark-primary text-dark-on-primary font-label text-label-lg font-bold tracking-wider uppercase hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2">
+                <span>JOIN PROTOCOL SPRINT</span>
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </button>
+              <span class="font-mono text-mono-sm text-dark-on-surface/50">NO FEES // ZERO SPONSORSHIPS</span>
+            </div>
+          </div>
+
+          <!-- EMBEDDED SCROLLING SCREENSHOT CAROUSEL -->
+          <div class="mt-6 pt-6 border-t border-dark-outline/30">
+            <div class="flex items-center justify-between mb-3">
+              <span class="font-mono text-mono-sm text-dark-on-surface/50 uppercase">INTERFACES &amp; TOOLS // PROTOCOL PREVIEWS</span>
+              <div class="flex items-center gap-2">
+                <button type="button" onclick="scrollCarousel(&#39;carousel-track-2&#39;, -320)" aria-label="Previous screenshot" class="w-8 h-8 flex items-center justify-center border border-dark-outline bg-dark-surface text-dark-on-surface hover:border-dark-primary transition-colors text-sm">
+                  <span class="material-symbols-outlined text-base">chevron_left</span>
+                </button>
+                <button type="button" onclick="scrollCarousel(&#39;carousel-track-2&#39;, 320)" aria-label="Next screenshot" class="w-8 h-8 flex items-center justify-center border border-dark-outline bg-dark-surface text-dark-on-surface hover:border-dark-primary transition-colors text-sm">
+                  <span class="material-symbols-outlined text-base">chevron_right</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CAROUSEL TRACK -->
+            <div id="carousel-track-2" data-component-id="carousel-default" data-component-type="carousel" data-component-variant="default" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-2 no-scrollbar scroll-smooth">
+              <!-- Slide 1 -->
+              <div class="min-w-[280px] sm:min-w-[340px] flex-none snap-start bg-dark-surface border border-dark-outline">
+                <div class="aspect-video relative overflow-hidden bg-neutral-900">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrDN8zFB_IIptqKFeEC8MpN5vAz8Vslxg4G0VHQFai256bCGAPJn0gDQgxz4c_GBsRbTcPhYElA4qhFZOv8nI56mdbz5LZwCsQzj7ttuylnakFGLoFiJetthTYwf1_dmrK5Bv81OgC_B9KPws09YPjY4pqjDRLT4eAm6UhW7T_zeJ9iV8UXVQiIBu35IU9TdoLCDN_1KnY8X2WkLmYdgAAO9jFLtusTBllY5v0PzdgF-zABkcn5X" alt="Dark minimalist desk setup with notebook and tablet" class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300">
+                  <div class="absolute bottom-2 left-2 px-2 py-0.5 bg-dark-surface/90 border border-dark-outline font-mono text-[10px] text-dark-on-surface">
+                    ANALOG + DIGITAL RIG
+                  </div>
+                </div>
+                <div class="p-3">
+                  <p class="font-mono text-mono-sm text-dark-on-surface/70">Manual note logging &amp; tracking</p>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="min-w-[280px] sm:min-w-[340px] flex-none snap-start bg-dark-surface border border-dark-outline">
+                <div class="aspect-video relative overflow-hidden bg-neutral-900">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrBQDGO-HHJWQm_iJ8lkPCfmahCjjvqLNb2BWlq4uMS_Gyx7Jx0ypOn1OAx2UPo6waNCPar2D0Ctd9k_SRlFlGtqhJimqFuEpYzu9D8JKoq8BiY8Qxgz-9wuCJro99SZ2cp2j7mLIlNtaO3e5bvXoimua5wHMkVt4G_-RUCq9RXqeCJsro0ykXi4IE3dRgHSKZgb69O9qupY-jqIS_1b2jjQonNeEacoIkOv7GFRngU649Jfayfe" alt="Ultra-minimal monitor code view" class="w-full h-full object-cover grayscale contrast-125 hover:grayscale-0 transition-all duration-300">
+                  <div class="absolute bottom-2 left-2 px-2 py-0.5 bg-dark-surface/90 border border-dark-outline font-mono text-[10px] text-dark-on-surface">
+                    OUTPUT TELEMETRY
+                  </div>
+                </div>
+                <div class="p-3">
+                  <p class="font-mono text-mono-sm text-dark-on-surface/70">Live commit proof dashboard</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 3: REACH OUT -->
+      <article id="card-reach-out" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="info-card w-full bg-dark-surface-container border border-dark-outline transition-all duration-state-change hover:border-dark-on-surface/50">
+        <button type="button" onclick="toggleCard(&#39;card-reach-out&#39;)" class="w-full p-6 sm:p-8 flex items-center justify-between text-left focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-dark-primary cursor-pointer group" aria-expanded="false" aria-controls="content-reach-out">
+          <div class="flex items-center gap-4 sm:gap-6">
+            <span class="font-mono text-mono-sm text-dark-on-surface/40 group-hover:text-dark-primary transition-colors">03</span>
+            <div>
+              <h2 class="font-headline text-headline-md sm:text-headline-lg font-bold uppercase tracking-tight text-dark-on-surface group-hover:text-dark-primary transition-colors" data-design-text-token="headline-md">
+                Reach out
+              </h2>
+              <p class="font-body text-body-sm text-dark-on-surface/50 mt-1">
+                Node coordinates, encryption keys, and direct organizer channels.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="font-mono text-mono-sm text-dark-on-surface/40 hidden sm:inline toggle-hint">EXTEND</span>
+            <span class="material-symbols-outlined text-dark-on-surface/70 text-2xl transition-transform duration-accordion-toggle chevron-icon">
+              expand_more
+            </span>
+          </div>
+        </button>
+
+        <!-- EXTENDED CONTENT AREA -->
+        <div id="content-reach-out" class="card-content hidden px-6 pb-8 sm:px-8 border-t border-dark-outline/40 pt-6">
+          <div class="max-w-2xl space-y-6">
+            <p class="font-body text-body-md text-dark-on-surface/80" data-design-text-token="body-md">
+              Need host clearance for a local physical node? Inquiring about group participation or offline mirror coordinates? Direct communication lines are active.
+            </p>
+
+            <!-- DIRECT CONTACT GRID -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <a href="mailto:dispatch@studyrebellion.io" class="p-4 bg-dark-surface border border-dark-outline hover:border-dark-primary group transition-colors block">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-mono text-mono-sm text-dark-on-surface/50">SECURE DISPATCH</span>
+                  <span class="material-symbols-outlined text-sm text-dark-on-surface/50 group-hover:text-dark-primary">mail</span>
+                </div>
+                <div class="font-mono text-dark-primary font-medium text-sm">dispatch@studyrebellion.io</div>
+              </a>
+
+              <a href="#matrix" onclick="alert(&#39;Matrix Room: #study-rebellion:matrix.org&#39;); return false;" class="p-4 bg-dark-surface border border-dark-outline hover:border-dark-primary group transition-colors block">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-mono text-mono-sm text-dark-on-surface/50">ENCRYPTED MATRIX</span>
+                  <span class="material-symbols-outlined text-sm text-dark-on-surface/50 group-hover:text-dark-primary">tag</span>
+                </div>
+                <div class="font-mono text-dark-primary font-medium text-sm">#study-rebellion:matrix.org</div>
+              </a>
+            </div>
+
+            <!-- TRANSMISSION FORM -->
+            <div class="pt-4 border-t border-dark-outline/30">
+              <span class="font-mono text-mono-sm text-dark-on-surface/50 block mb-3">SEND ANONYMOUS INQUIRY</span>
+              <form onsubmit="handleInquiry(event)" class="space-y-3">
+                <input type="text" placeholder="Your handle or callsign (e.g. operator_09)" required class="w-full px-4 py-2.5 bg-dark-surface border border-dark-outline text-dark-on-surface placeholder:text-dark-on-surface/30 font-mono text-sm focus:border-dark-primary focus:ring-0 outline-none">
+                <textarea rows="3" placeholder="Inquiry or local node proposal..." required class="w-full px-4 py-2.5 bg-dark-surface border border-dark-outline text-dark-on-surface placeholder:text-dark-on-surface/30 font-body text-sm focus:border-dark-primary focus:ring-0 outline-none"></textarea>
+                <button type="submit" class="px-6 py-2.5 bg-dark-surface border border-dark-outline hover:border-dark-primary hover:text-dark-primary font-mono text-mono-sm uppercase tracking-wider text-dark-on-surface transition-colors flex items-center gap-2">
+                  <span>TRANSMIT DISPATCH</span>
+                  <span class="material-symbols-outlined text-sm">send</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- STARK FOOTER -->
+  <footer class="w-full border-t border-dark-outline bg-dark-surface/90 py-6 mt-16">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="font-mono text-[11px] text-dark-on-surface/40">
+        STUDY REBELLION PT. II // @NIBIRSANKAR
+      </div>
+      <div class="flex items-center gap-6 font-mono text-[11px] text-dark-on-surface/50">
+        <span>NO SPONSORS</span>
+        <span>NO ALGORITHMS</span>
+        <span>ABSOLUTE FOCUS</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT LOGIC: COUNTDOWN, EXTENDABLE CARDS, CAROUSEL CONTROLS -->
+  <script>
+    // Live Countdown Timer logic
+    function updateCountdown() {
+      // Event date: 11 days, 8 hours from reference point
+      const targetDate = new Date();
+      targetDate.setDate(targetDate.getDate() + 11);
+      targetDate.setHours(targetDate.getHours() + 8);
+      targetDate.setMinutes(targetDate.getMinutes() + 24);
+
+      function tick() {
+        const now = new Date();
+        const diff = targetDate.getTime() - now.getTime();
+
+        if (diff <= 0) {
+          document.getElementById('countdown-days').innerText = "00";
+          document.getElementById('countdown-hours').innerText = "00";
+          document.getElementById('countdown-minutes').innerText = "00";
+          document.getElementById('countdown-seconds').innerText = "00";
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / 1000 / 60) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        const pad = (n) => String(n).padStart(2, '0');
+
+        const elDays = document.getElementById('countdown-days');
+        const elHours = document.getElementById('countdown-hours');
+        const elMinutes = document.getElementById('countdown-minutes');
+        const elSeconds = document.getElementById('countdown-seconds');
+
+        if (elDays) elDays.innerText = pad(days);
+        if (elHours) elHours.innerText = pad(hours);
+        if (elMinutes) elMinutes.innerText = pad(minutes);
+        if (elSeconds) elSeconds.innerText = pad(seconds);
+      }
+
+      tick();
+      setInterval(tick, 1000);
+    }
+    updateCountdown();
+
+    // Expandable accordion card functionality
+    function toggleCard(cardId) {
+      const card = document.getElementById(cardId);
+      if (!card) return;
+
+      const button = card.querySelector('button[aria-expanded]');
+      const content = card.querySelector('.card-content');
+      const chevron = card.querySelector('.chevron-icon');
+      const hint = card.querySelector('.toggle-hint');
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+      if (isExpanded) {
+        button.setAttribute('aria-expanded', 'false');
+        content.classList.add('hidden');
+        chevron.style.transform = 'rotate(0deg)';
+        if (hint) hint.innerText = 'EXTEND';
+        card.classList.remove('border-dark-primary');
+      } else {
+        button.setAttribute('aria-expanded', 'true');
+        content.classList.remove('hidden');
+        chevron.style.transform = 'rotate(180deg)';
+        if (hint) hint.innerText = 'COLLAPSE';
+        card.classList.add('border-dark-primary');
+      }
+    }
+
+    // Carousel horizontal navigation
+    function scrollCarousel(trackId, offset) {
+      const track = document.getElementById(trackId);
+      if (track) {
+        track.scrollBy({ left: offset, behavior: 'smooth' });
+      }
+    }
+
+    // Inquiry submission handler
+    function handleInquiry(e) {
+      e.preventDefault();
+      alert('Transmission received. Operator will reach out via secure channels.');
+      e.target.reset();
+    }
+  </script>
+
+
+</body></html>
