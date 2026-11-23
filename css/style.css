@@ -294,6 +294,10 @@ ul li {
 	}
 }
 
+  video {
+      max-width: 100%;
+  }
+
 /* Font Face Definitions
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @font-face {
