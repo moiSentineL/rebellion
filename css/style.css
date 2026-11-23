@@ -51,7 +51,7 @@
 	padding:0;
 	background-color:#ffffff;
 	color:#1a1a1a;
-	font-family:"Open Sans",system-ui;
+	font-family:"Departure Mono","Open Sans",system-ui;
     font-weight:400;
 	line-height:1.6;
 }
@@ -152,7 +152,7 @@ a:hover {
 	display:inline-flex;
 	align-items:center;
 	justify-content:center;
-	width:18.75rem;             	/* 300px */
+	width:24rem;             	/* 300px */
  	min-height:3rem;                /* 48px */
   	padding:0.75rem 1rem;         	/* 12px ; 16px */
   	font-size:1.125rem;           	/* 18px */
